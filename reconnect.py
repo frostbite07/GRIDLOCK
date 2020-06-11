@@ -1,0 +1,1 @@
+nmcli d wifi connect "Frosty" password bisaat1853# ifname wlan0
