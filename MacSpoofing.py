@@ -15,4 +15,5 @@ def macspoofing():
     os.system("ip link set dev wlan0 up")
     #os.system("macchanger -s wlan0")
     time.sleep(2)
-    return 1
+    
+    return 1   

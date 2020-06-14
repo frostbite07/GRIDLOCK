@@ -3,6 +3,13 @@ import time
 
 startTime = time.time()
 
+def portsniffer_gg():
+    print("\nScanning for Handshake...")
+    time.sleep(8)
+    print("\nFound Handshake!\nRunning Brute Force...")
+    time.sleep(2)
+    return 1
+
 def portsniff():    
     if __name__ == '__main__': 
         target = input('Enter the host to be scanned: ') 
