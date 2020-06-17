@@ -20,7 +20,7 @@ def display_evaluation(s):
     topFrame.destroy()
     topFrame2 = tk.Frame(root, bg="#202020")
     topFrame2.place(rely=0.15, relwidth=1, relheight = 0.65)
-    score_banner = "GRIDLOCK Score for " + enter_ssid.get() + ":\n\n" + str(s) +" / 5"
+    score_banner = "GRIDLOCK Score for " + enter_ssid.get() + ":\n\n" + str(s) +" / 10"
     Label(topFrame2, text=score_banner,pady=120, anchor=CENTER, bg="#202020", fg="#0095FF" , font="noah 15 bold").pack()
     root.update()
 

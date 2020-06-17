@@ -12,7 +12,7 @@ def evaluate_score(a,b,c,d,e):
     test_5 = e*4.75
 
     total_15 = test_1+test_2+test_3+test_4+test_5
-    total_5 = 5 - (total_15/3)
+    total_5 = 10 - ((total_15/3)*2)
     final_score = round_up(total_5,2) 
     
     return final_score
