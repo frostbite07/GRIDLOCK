@@ -1,3 +1,4 @@
 import os
 def reconnect():
-    os.system("nmcli d wifi connect Frosty password bisaat1853# ifname wlan0")
+    return "Needs Set up"
+    #os.system("nmcli d wifi connect <SSID> password <Password> ifname wlan0")
